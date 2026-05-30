@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
@@ -5,7 +7,7 @@ import {
   CheckCircle2, AlertCircle, Terminal, Lock, UploadCloud, 
   Sparkles, Database, Shield, Globe, CircleDot, Layers, HelpCircle
 } from 'lucide-react';
-import { AIWorker, TaskLog, MockFile, IntegrationApp } from '../types';
+import { AIWorker, TaskLog, MockFile, IntegrationApp } from '@/types';
 
 export default function OSSimulator() {
   // Navigation internal to mock OS
@@ -834,7 +836,7 @@ export default function OSSimulator() {
                         key={app.id}
                         className={`p-4 border rounded-xl flex flex-col justify-between transition-all ${
                           app.connected 
-                            ? 'border-emerald-200 bg-emerald-50/1D' 
+                            ? 'border-emerald-200 bg-emerald-50/10' 
                             : 'border-stone-200 bg-stone-50/5 hover:border-stone-300'
                         }`}
                       >

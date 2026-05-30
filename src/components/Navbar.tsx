@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from 'motion/react';
 
 interface NavbarProps {
   onStartBuilding: () => void;
@@ -14,16 +14,18 @@ export default function Navbar({ onStartBuilding, onLogin, onPricingClick, onLog
     <motion.header 
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
       className="w-full border-b border-stone-200/40 bg-white sticky top-0 z-50 px-6 md:px-12 py-6"
       id="octo-navbar"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* Brand Logo */}
         <div 
           onClick={onLogoClick}
           className="flex items-center gap-3 select-none group cursor-pointer"
         >
           <div className="relative w-8 h-8 flex items-center justify-center border-2 border-stone-950 rounded-lg group-hover:scale-105 transition-transform duration-300">
+            {/* Minimal Geometric logo node representing an octopus node or AI system core */}
             <div className="w-2.5 h-2.5 bg-stone-950 rounded-full transition-all duration-300 group-hover:w-3.5 group-hover:h-3.5" />
             <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
             <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-emerald-500" />
@@ -33,6 +35,7 @@ export default function Navbar({ onStartBuilding, onLogin, onPricingClick, onLog
           </span>
         </div>
 
+        {/* Action Links */}
         <div className="flex items-center gap-8 font-medium">
           {onPricingClick && (
             <button 
